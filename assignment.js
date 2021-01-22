@@ -1,8 +1,8 @@
-function kilometerToMeter(kiloNum)
+function kilometerToMeter(kiloNum)//first problem
 {
-    if(kiloNum<=0)
+    if(kiloNum<0)
     {
-        return "0 or negetive can't be applied"; 
+        return "Negative can't be applied"; 
     }
     else
     {
@@ -11,11 +11,12 @@ function kilometerToMeter(kiloNum)
     }
 }
 
-function budgetCalculator(watchNum,phoneNum,laptopNum)
+
+function budgetCalculator(watchNum,phoneNum,laptopNum)//second problem
 {
     if(watchNum<0 || phoneNum<0 || laptopNum<0)
     {
-        return "system crushed can't take negetive value";
+        return "System crushed can't take negative value";
     }
     else
     {
@@ -27,11 +28,12 @@ function budgetCalculator(watchNum,phoneNum,laptopNum)
     }
 }
 
-function hotelCost(daysNum)
+
+function hotelCost(daysNum)//third problem
 {
-    if(daysNum<=0)
+    if(daysNum<0)
     {
-        return " if your input is 0 or negetive you didn't stay at hotel";
+        return " If your input is negative you didn't stay at hotel";
     }
     else
     {
@@ -61,14 +63,22 @@ function hotelCost(daysNum)
     }
 }
 
-function megaFriend(names)
+
+function megaFriend(names)//final problem
 {
-    var bigName="";
-    for(var i = 0;i<names.length;i++)
+    if(names.length<=0 || typeof(names)==='number'||typeof(names)==='string')
     {
-        var largeString = names[i];
-        if(bigName.length<largeString.length)
-        bigName=names[i];
+        return "This input will not give you no output,try to take input a string array";
     }
-    return bigName;
+    else
+    {
+        var bigName="";
+        for(var i = 0;i<names.length;i++)
+        {
+            var largeString = names[i];
+            if(bigName.length<largeString.length)
+            bigName=names[i];
+        }
+        return bigName;
+    }
 }
